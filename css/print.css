@@ -1,0 +1,37 @@
+
+/* Fjerner elementer fra print side */
+@media print{
+    h1, nav, aside, section, footer, picture{
+        display: none;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        line-height: 1.2em;
+        word-spacing: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+    }
+
+    h2, h4, ol{
+        page-break-after: avoid;
+    }
+
+    p{
+        page-break-inside: avoid;
+    }
+
+    
+
+    
+
+
+
+
+
+   
+
+ 
+
+}

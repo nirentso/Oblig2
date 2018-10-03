@@ -1,0 +1,178 @@
+body{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+
+    background-image: url(../images/background3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CSS grid */
+#content{
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-auto-rows: minmax(100px, auto);
+   grid-gap: 5px;
+   max-width: 1300px;
+   max-height: 100%;
+   margin: 0 auto;
+   
+}
+
+#content>*{
+    padding: 15px;
+}
+
+.headergrid{
+    grid-column: 1 / 13;
+    background-image: url(../images/header3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+main{
+    grid-column: 4 / 13;
+    grid-row: 3 / 8;
+    text-align: left;
+    background-color:white;
+    opacity: 0.9;
+    
+}
+
+nav{
+    grid-column: 1 / 13;
+    background-color: white;
+    opacity: 0.8;
+    text-align: left;
+
+   
+}
+
+aside{
+    grid-column: 1 / 4;
+    grid-row: 3 / 8;
+    background-color: white;
+    opacity: 0.9;   
+}
+
+footer{
+    grid-column: 1 / 13;
+    background-color: white;
+    opacity: 0.9;
+
+}
+
+/* flexbox */
+
+.flexaside{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.flexmain{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+/* navigasjon */
+
+ul{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    list-style-type: none;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    width: max-content;
+    float: left;
+}
+
+li a:hover {
+    background-color: darkslategrey;
+    color:black;
+     }
+
+/* Links */
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: darkslategrey;
+}
+
+
+/* Bilde og video */
+
+img{
+    display: block;
+    margin: 20px;
+    float: right;
+    width: 14%;
+    opacity: 0.9;
+    flex-wrap: cover;
+    
+    
+}
+
+iframe{
+    width: 100%;
+    height: auto;
+}
+
+/* Knapper, diverse */
+
+
+#buttonGoogle{
+    background-color: #333333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 20px;
+}
+
+.button{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Artikkelbilder */
+#mediaSpeech{
+    float: left;
+    width: 100%;
+}
+
+#flexbox1{
+    float: left;
+    width: 100%;
+}
+
+#flexbox2{
+    float: left;
+    width: 100%;
+}
+
+#cssgrid1{
+    float: right;
+    width: 50%;
+}
+
+#cssgrid2{
+    float: right;
+    width: 50%;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Layouts</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+    </head>
+    <body>
+        <div id="content">
+            <header class="headergrid">
+                <h1>Layouts</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HJEM</a></li>
+                    <li><a href="gitgithub.html">GITHUB</a></li>
+                    <li><a href="media.html">MEDIA</a></li>
+                    <li><a href="layouts.html">LAYOUTS</a></li>
+                </ul>
+            </nav>
+            <main class="flexmain">
+                <article>
+                    <header>
+                        <h2>CSS layouts</h2>
+                    </header>
+                    <time datetime="2018-09-29">Publisert av Thomas Nilsen, 29.09.2018</time>
+
+                    <p>CSS står for Cascading Style Sheets og beskriver hvordan et HTML dokument skal se ut. CSS har egentlig 
+                    aldri gjort en god jobb på dette, frem til introduksjonen av CSS Grid og flexbox. Et HTML dokument uten 
+                    noe form for CSS vil vise alt i vertikalt eller horisontal flyt, avhengig av hvordan du skriver koden. 
+                    Det er her CSS layouts kommer inn, og kan endre posisjonering og hvordan elementer skal flyte. Vi skal 
+                    nå se nærmere på hva de slags rolle og fordeler de respektive har og hvilken andre typer layout 
+                    funksjoner som finnes i CSS. </p>
+
+                    <h4>CSS Flexbox</h4>
+                    <p>Flexbox er en ny layout metode som ble introdusert i CCS3 som gjør at alt vises «1-dimensjonalt». Metoden 
+                    benyttes hvis man ønsker at innholdet skal legges i kolonner, eller som rader. Flexbox er ment som en 
+                    ersatter til funksjoner som "float" og "table" layouts. Som vist under, vil innholdet uten flexbox ta 
+                    den plassen den krever, men med flexbox vil innholdet tilpasse seg boksen den har fått angitt.</p>
+
+                    <picture>
+                        <img id="flexbox1" src="images/flexbox1.png" alt="">
+                    </picture>
+
+                    <p>For å enkelt forklare hvordan Flexbox kan bygges opp, er bilder den beste illustrasjonen.
+                    Flexbox layout inneholder en «flex container» som igjen har «flex items» som vises under:</p>
+                   
+                    <picture>
+                        <img id="flexbox2" src="images/flexbox2.png" alt="">
+                    </picture>
+
+                    <p>«Flex container» kan enten bli strukket horsiontalt eller vertikalt på hovedaksen og «flex items» kan minimeres,
+                    bli strukket ut eller fylle plass som ikke er brukt over kryssaksen.</p>
+
+                    <picture>
+                        <img id="flexbox3" src="iamge/flexbox3" alt="">
+                    </picture>
+
+                    <p>Ved å benytte flexbox kan man lage en ryddig og komplisert layout med kun noen få CSS linjer.
+                    For eksempel så vil koden "display:flex" gjøre dette:</p>
+                    <ol>
+                        <li>Opprette en flex-container</li>
+                        <li>Oppretter flex-items som vil bli lagt fra venstre til høyre som standard</li>
+                        <li>Hvis det ikke er plass til alle «flex items» som ønskes, så vil de automatisk minske i størrelse for
+                        å få plass til de horisontalt på en linje.</li>
+                    </ol>
+                    <p>Det finnes flere muligheter for å endre ved å blant annet benytte flex-wrap, flex-direction, align-content og flex grow.</p>
+
+                    <p>Alt dette gjør flexbox til et nyttig verktøy for å strukturere opp nettsiden, uten å måtte manuelt sette inn «tables» 
+                    og benytte «float» for design. I tillegg er det støttet av de fleste browsere, utenom de eldre versjonene av 
+                    Internet Explorer. </p>
+
+                    <p>For mer informasjon, trykk på linkene under:</p>
+                    <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Guide til Flexbox</a></p>
+                    <p><a href="https://medium.freecodecamp.org/learn-css-flexbox-in-5-minutes-b941f0affc34">Lynkurs i Flexbox</a></p>
+
+                    <h4>CSS Grid</h4>
+                    <picture>
+                            <img id="cssgrid1" src="images/cssgrid1.png" alt="">
+                    </picture>
+                    <p>I CSS flexbox kan man kun behandle kolonner og rader hver for seg. Men med CSS Grid som er et 2-dimensjonalt system, behandles
+                    begge samtidig. Dette gjør CSS Grid til et sterkt layout verktøy.</p>
+
+                    <p>Css Grid behandler nettsiden som et rutenett som gjør at man kan legge til kolonner og rader, 
+                    som gjør at man lett kan bygge opp layout uten å benytte «juks» med div og span for den samme jobben. </p>
+
+                    <p>CSS Grid er bygd opp av flere elementer, blant annet:</p>
+                    <ol>
+                        <li>Grid container - Oppretter rutenett</li>
+                        <li>Grid items - Samme som flexbox</li>
+                        <li>Grid gap - Distanse mellom kolonner og rader</li>
+                        <li>Grid cell - Distanse mellom 2 tilstøtende rader</li>
+                        <li>Grid Area - Celler som utgjør et rektangulært område</li>
+                    </ol>
+
+                    <picture>
+                            <img id="cssgrid2" src="images/cssgrid2.png" alt="">
+                    </picture>
+    
+                    <p>Hovedforskjellen mellom Css grid og flexbox er at førstenevnte så kan man behandle kolonner og rader 
+                    samtidig, som et 2-dimensjonalt system, men i sistenevnte kan man kun behandle dette hver for seg. 
+                    Men, hvis man kombinerer flexbox og grid, vil man ha et sterkt verktøy for å bygge en layout. Man 
+                    kan for eksempel benytte Css grid for body layout, så strukturere opp «aside» eller «main» med flexbox.</p>
+                </article> 
+            </main>
+                <aside class="flexaside">
+                    <section>
+                        <h4>Video om webutvikling</h4>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wm6CUkswsNw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </section>
+
+                    <section>
+                        <h4>Les mer om responsivt design:</h4>
+                            <p><a href="https://www.w3schools.com/html/html_responsive.asp">Responsive Web Design?</a></p>
+                            <p><a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/"></a></p>
+                            <p><a href="https://internetingishard.com/html-and-css/responsive-design/">Responsive design</a></p>
+                            <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Grid</a></p>
+                            <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Flexbox</a></p>
+                    </section>
+
+                    <section>
+                        <h4>For mer informasjon om Github</h4>
+                        <a href="https://www.howtogeek.com/180167/htg-explains-what-is-github-and-what-do-geeks-use-it-for/"><button id="buttonGoogle">Trykk her</button></a>
+                    </section>
+                </aside>
+            <footer>Footer</footer>
+        </div>
+    </body>
+</html>
